@@ -9,6 +9,7 @@
   var FormHandler = App.FormHandler;
   var CheckList = App.CheckList;
   var myTruck = new Truck("ncc-1701", new DataStore());
+  //
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   var formHandler = new FormHandler(FORM_SELECTOR);
@@ -22,5 +23,6 @@
     checkList.addRow.call(checkList, data);
   });
 
+  console.log(formHandler);
   window.myTruck = myTruck;
 })(window);
